@@ -15,11 +15,15 @@ describe Playground do
     end
 
     context 'when PLACE is NOT first operation' do
+      let(:subject) { described_class.new(path) }
       let(:path) { 'spec/fixtures/place_not_first.txt' }
 
-      it 'creates the proper ojects' do
-        expect { described_class.new(path) }
-          .to raise_error(FirstOperationNotPlaceError)
+      it 'ignores the actions before PLACE and calls MOVE only 1 time' do
+        expect_any_instance_of(Toy).to receive(:place).exactly(1).times
+        expect_any_instance_of(Toy).to receive(:move).exactly(1).times
+        expect_any_instance_of(Toy).to receive(:report).exactly(1).times
+
+        subject.run
       end
     end
   end
