@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class OperationValidator
   VALID_OPERATIONS = %w[
     MOVE

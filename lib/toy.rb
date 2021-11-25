@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Toy
   attr_reader :map, :current_x, :current_y, :direction
 
@@ -17,15 +19,19 @@ class Toy
     case direction
     when 'NORTH'
       return if current_y + 1 > map.height - 1
+
       @current_y += 1
     when 'EAST'
       return if current_x + 1 > map.width - 1
+
       @current_x += 1
     when 'SOUTH'
       return if (current_y - 1).negative?
+
       @current_y -= 1
     when 'WEST'
       return if (current_x - 1).negative?
+
       @current_x -= 1
     end
   end

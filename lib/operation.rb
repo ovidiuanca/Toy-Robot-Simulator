@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Operation
   attr_reader :type, :x, :y, :direction
 

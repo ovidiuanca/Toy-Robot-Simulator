@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/operation_reader'
 require_relative '../lib/operation'
 

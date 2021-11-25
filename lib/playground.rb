@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/operation_reader'
 require './lib/operation_validator'
 require './lib/operation'

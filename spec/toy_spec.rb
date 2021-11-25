@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../lib/map'
 require_relative '../lib/toy'
 require_relative '../lib/operation'
@@ -72,7 +74,7 @@ describe Toy do
 
   describe '#move' do
     before do
-        operation.build!
+      operation.build!
     end
 
     context 'when moving inside the map' do
@@ -168,7 +170,7 @@ describe Toy do
     end
 
     context 'when direction is NORTH' do
-      let(:operation) { Operation.new("PLACE 1,1,NORTH") }
+      let(:operation) { Operation.new('PLACE 1,1,NORTH') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -180,7 +182,7 @@ describe Toy do
     end
 
     context 'when direction is EAST' do
-      let(:operation) { Operation.new("PLACE 1,1,EAST") }
+      let(:operation) { Operation.new('PLACE 1,1,EAST') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -192,7 +194,7 @@ describe Toy do
     end
 
     context 'when direction is SOUTH' do
-      let(:operation) { Operation.new("PLACE 1,1,SOUTH") }
+      let(:operation) { Operation.new('PLACE 1,1,SOUTH') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -204,7 +206,7 @@ describe Toy do
     end
 
     context 'when direction is WEST' do
-      let(:operation) { Operation.new("PLACE 1,1,WEST") }
+      let(:operation) { Operation.new('PLACE 1,1,WEST') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -222,7 +224,7 @@ describe Toy do
     end
 
     context 'when direction is NORTH' do
-      let(:operation) { Operation.new("PLACE 1,1,NORTH") }
+      let(:operation) { Operation.new('PLACE 1,1,NORTH') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -234,7 +236,7 @@ describe Toy do
     end
 
     context 'when direction is EAST' do
-      let(:operation) { Operation.new("PLACE 1,1,EAST") }
+      let(:operation) { Operation.new('PLACE 1,1,EAST') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -246,7 +248,7 @@ describe Toy do
     end
 
     context 'when direction is SOUTH' do
-      let(:operation) { Operation.new("PLACE 1,1,SOUTH") }
+      let(:operation) { Operation.new('PLACE 1,1,SOUTH') }
 
       it 'rotates correctly' do
         subject.place(operation)
@@ -258,7 +260,7 @@ describe Toy do
     end
 
     context 'when direction is WEST' do
-      let(:operation) { Operation.new("PLACE 1,1,WEST") }
+      let(:operation) { Operation.new('PLACE 1,1,WEST') }
 
       it 'rotates correctly' do
         subject.place(operation)

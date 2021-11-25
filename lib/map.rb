@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Map
   attr_accessor :width, :height
 
