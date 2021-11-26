@@ -1,10 +1,26 @@
- Toy Robot Simulator
-Description
+# Toy Robot Simulator
+
+## Installation
+```bash
+bundle install
+```
+
+## Run the app
+```bash
+ruby main.rb
+```
+
+## Run tests
+```bash
+rspec
+```
+
+## Description
 - The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units
 - There are no other obstructions on the table surface
 - The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed
 - You need to provide test data/results for the app & its logic
-Objectives
+## Objectives
 - Create an application that can read in commands of the following form:
 - PLACE X,Y,F
 - MOVE
@@ -22,22 +38,23 @@ Objectives
 - Input can be from a file, or from standard input, as the developer chooses
 - Provide test data to exercise the application
 
- Constraints:
+ ## Constraints:
 - The toy robot must not fall off the table during movement. This also includes the initial placement of the toy robot
 - Any move that would cause the robot to fall must be ignored
-- Example Input and Output:
+
+## Example Input and Output:
 
 - PLACE 0,0,NORTH
 - MOVE
 - REPORT
 
-Output: 0,1,NORTH
+**Output: 0,1,NORTH**
 
 - PLACE 0,0,NORTH
 - LEFT
 - REPORT
 
-Output: 0,0,WEST
+**Output: 0,0,WEST**
 
 - PLACE 1,2,EAST
 - MOVE
@@ -46,4 +63,4 @@ Output: 0,0,WEST
 - MOVE
 - REPORT
 
-Output: 3,3,NORTH
+**Output: 3,3,NORTH**
